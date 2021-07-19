@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Deck {
     private static final int deckSize = 52;
@@ -7,6 +8,8 @@ public class Deck {
     public static void main(String args[]){
         // Creates a deck 1-52 in that order.
         ArrayList<Integer> deck = new ArrayList<Integer>();
+
+        ArrayList<Integer> notDeck = new ArrayList<Integer>();
 
         for(int x = 1; x <= deckSize; x++){
             deck.add(x);

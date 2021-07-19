@@ -14,9 +14,6 @@ public class Card {
 
 
 private final int suit;
-
-
-
 private final int value;
 
 //Creates Joker card with a value of 1.

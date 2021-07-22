@@ -1,25 +1,47 @@
 package Gameplay;
 
+import Players.HumanPlayer;
 import Players.Player;
 import playingCards.Card;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class Game {
+public class Game implements Rules {
 
+    private static Scanner input = new Scanner(System.in);
     //the players playing the game
-    public List<Player> players = new ArrayList<Player>();
-    //Num Of Players
-    private int numberOfPlayers;
+    public List<Player> players;
     //print stream of the game displayed to all players.
-    private PrintStream printStream = System.out;
+    private static PrintStream printStream = System.out;
     //The card that must lead first each round
     private Card startingCard;
     //a list of cumulative scores after each round
     private List<GameScoreList> scoreHistory = new ArrayList<GameScoreList>(10);
+    // Get name of players
+    public static List<Player> GreetPlayers(){
+        printStream.println("Welcome to Hearts");
+        List<Player> listOfPlayers = new ArrayList<>();
+        for(int i = 0; i<4; i++){
+            printStream.println("Player "+(i+1)+" what is your name?");
+            String nameOfPlayer = input.next();
+            HumanPlayer newPlayer = new HumanPlayer(nameOfPlayer);
+            listOfPlayers.add(newPlayer);
+        }
+        return listOfPlayers;
+    }
 
     public Game(List<Player> players) {
+        this.players = players;
+    }
+    public void play(){
+
+    }
+
+    @Override
+    public boolean mustPlaySuitThatIsDealt() {
+        return false;
     }
 }

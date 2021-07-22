@@ -30,8 +30,14 @@ public abstract class Player {
 
 
      public void receiveCard(Card card, int position) {
-        cards[position] = card;
+        //cards[position] = card;
     }
 
+    public Hand getHand() {
+        return hand;
+    }
 
+    public void setHand(Hand hand) {
+        this.hand = hand;
+    }
 }

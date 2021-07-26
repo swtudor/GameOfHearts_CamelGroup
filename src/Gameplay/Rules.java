@@ -8,4 +8,15 @@ public interface Rules {
     */
 
     boolean mustPlaySuitThatIsDealt();
+
+    boolean mustPlayCardWithHigherValue();
+
+    boolean canNotDiscardQueenOfSpadesTurnOne();
+
+    boolean canNotDiscardAHeartsCardTurnOne();
+
+    boolean twoOfClubsMustBePlayedFirstTurnOne();
+
+    boolean highestCardOfLedSuitWinsTheTrick();
+
 }

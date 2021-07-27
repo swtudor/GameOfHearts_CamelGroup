@@ -9,8 +9,6 @@ public interface Rules {
 
     boolean mustPlaySuitThatIsDealt();
 
-    boolean mustPlayCardWithHigherValue();
-
     boolean canNotDiscardQueenOfSpadesTurnOne();
 
     boolean canNotDiscardAHeartsCardTurnOne();

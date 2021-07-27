@@ -44,4 +44,16 @@ public class Game implements Rules {
     public boolean mustPlaySuitThatIsDealt() {
         return false;
     }
+
+    @Override
+    public boolean canNotDiscardQueenOfSpadesTurnOne() {return false; }
+
+    @Override
+    public boolean canNotDiscardAHeartsCardTurnOne() {return false; }
+
+    @Override
+    public boolean twoOfClubsMustBePlayedFirstTurnOne() {return false; }
+
+    @Override
+    public boolean highestCardOfLedSuitWinsTheTrick() {return false; }
 }

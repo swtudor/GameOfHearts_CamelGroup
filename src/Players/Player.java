@@ -40,4 +40,13 @@ public abstract class Player {
     public void setHand(ArrayList<Card> hand) {
         this.hand = hand;
     }
+    public void removeCard(int index) {
+        hand.remove(index);
+    }
+    public Card selectCard(int index) {
+        Card Heart = hand.get(index);
+        removeCard(index);
+        return Heart;
+
+    }
 }

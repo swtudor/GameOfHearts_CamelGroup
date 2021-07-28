@@ -42,11 +42,23 @@ public class Game implements Rules {
 
     @Override
     public boolean mustPlaySuitThatIsDealt() {
+        //bunch of if else statements
+        if (playerHasSuit){
+            mustPlaySuitThatIsDealt() = true;
+            return mustPlaySuitThatIsDealt();
+        }
+
+
         return false;
     }
 
     @Override
-    public boolean canNotDiscardQueenOfSpadesTurnOne() {return false; }
+    public boolean canNotDiscardQueenOfSpadesTurnOne() {
+        if (clubs = 0 ){
+            return false;
+        }
+
+         }
 
     @Override
     public boolean canNotDiscardAHeartsCardTurnOne() {return false; }

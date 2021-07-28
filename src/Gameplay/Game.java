@@ -42,23 +42,11 @@ public class Game implements Rules {
 
     @Override
     public boolean mustPlaySuitThatIsDealt() {
-        //bunch of if else statements
-        if (playerHasSuit){
-            mustPlaySuitThatIsDealt() = true;
-            return mustPlaySuitThatIsDealt();
-        }
-
-
         return false;
     }
 
     @Override
-    public boolean canNotDiscardQueenOfSpadesTurnOne() {
-        if (clubs = 0 ){
-            return false;
-        }
-
-         }
+    public boolean canNotDiscardQueenOfSpadesTurnOne() {return false; }
 
     @Override
     public boolean canNotDiscardAHeartsCardTurnOne() {return false; }
@@ -67,5 +55,4 @@ public class Game implements Rules {
     public boolean twoOfClubsMustBePlayedFirstTurnOne() {return false; }
 
     @Override
-    public boolean highestCardOfLedSuitWinsTheTrick() {return false; }
-}
+    public boolean highestCardOfLedSuitWinsTheTrick() {return false; }}
